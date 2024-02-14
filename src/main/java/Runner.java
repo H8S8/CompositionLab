@@ -2,6 +2,7 @@ import garage.land.Car;
 import garage.engine.CombustionEngine;
 import garage.engine.ElectricEngine;
 import garage.engine.IEngine;
+import garage.water.Speedboat;
 
 public class Runner {
 
@@ -16,6 +17,12 @@ public class Runner {
         IEngine electricEngine = new ElectricEngine(399, 100);
         hondaJazz.setEngine(electricEngine);
         System.out.println(hondaJazz.getHorsePower());
+
+        Speedboat gottaGoFast = new Speedboat(500, 70, true, "Planing", combustionEngine);
+        System.out.println(gottaGoFast.getHorsePower());
+
+        gottaGoFast.setEngine(electricEngine);
+        System.out.println(gottaGoFast.getHorsePower());
     }
 
 }
